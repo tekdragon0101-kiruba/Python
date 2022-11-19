@@ -1,3 +1,10 @@
+"""
+To Use gmail, you need to enable 'app password' for sending mail from sender gmail id.
+If not enable, it will not working, reports: 'authentication not accepted.' from gmail. 
+"""
+# Author: kirubakaran K
+# Project title: ScrapIt-MailIt
+
 import requests
 from bs4 import BeautifulSoup
 import smtplib
@@ -48,7 +55,8 @@ def components_for_sending_mail(sender, receiver):
     FROM = sender  # from email id
     TO = receiver  # to email id
     # athentication of from's email id
-    PASSWD = 'ohplqbfhdtazxhyj'  # input('Enter the password: ')
+    PASSWD = '' # put you password here
+    #input('Enter the password: ')
     print('OK')
     # creating the body of a mail
     msg = MIMEMultipart()
