@@ -81,8 +81,7 @@ def sending_email_thro_smpt_server(server_addr, port, f, t, pass_, msg):
     print('Email Sent.')
     server.quit()
 
-
-content = extract_news('https://news.ycombinator.com/')
-content += ('<br>'+'-'*50+'<br>'+'<br>End of the message<br>')
-components_for_sending_mail(
-    'set sender email', 'set receiver email')
+if __name__ == '__main__':
+    content = extract_news('https://news.ycombinator.com/')
+    content += ('<br>'+'-'*50+'<br>'+'<br>End of the message<br>')
+    components_for_sending_mail('set sender email', 'set receiver email')
